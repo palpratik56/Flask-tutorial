@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block a %}
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+        <div>
+            {{form.uname.label}}
+            {{form.uname}}
+            <!-- checking for errors -->
+            {% if form.uname.errors %}
+                {% for er in form.uname.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.mail.label}}
+            {{form.mail}}
+            <!-- checking for errors -->
+            {% if form.mail.errors %}
+                {% for er in form.mail.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.gen.label}}
+            {{form.gen}}
+            <!-- checking for errors -->
+            {% if form.gen.errors %}
+                {% for er in form.gen.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.dob.label}}
+            {{form.dob}}
+            <!-- checking for errors -->
+            {% if form.dob.errors %}
+                {% for er in form.dob.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.pwd.label}}
+            {{form.pwd}}
+            <!-- checking for errors -->
+            {% if form.pwd.errors %}
+                {% for er in form.pwd.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{form.cpwd.label}}
+            {{form.cpwd}}
+            <!-- checking for errors -->
+            {% if form.cpwd.errors %}
+                {% for er in form.cpwd.errors %}
+                    <div>{{er}}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>{{form.sub()}}</div>
+        <br>
+        <div>
+            <p>Already Have an account? <a href="{{url_for('log')}}">Log in</a></p>
+        </div>
+    </form>
+{% endblock a %}

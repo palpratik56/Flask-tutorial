@@ -1,0 +1,15 @@
+
+{% extends 'layout.html' %}
+{% block a %}
+<h3 style="color:rgb(255, 0, 200); font-size: 120%;">Contents:</h3>
+<div>
+    <ul style="color:rgb(0, 4, 255); font: 1em sans-serif; font-size: 100%;">
+        <li><a style="color:rgb(0, 4, 255)" href="{{url_for('ab')}}" target="_blank">About</a></li>
+        <li><a style="color:rgb(0, 4, 255)" href="{{url_for('con')}}" target="_blank">Contact</a></li>
+    </ul>
+</div>
+{% endblock a %}
+    <!-- <h3 style="color:rgb(21, 255, 0); font-size: 150%;">Contents:-</h3>
+   
+    <p style="font-size: 100%; font: 1em sans-serif;"> <a href="{{url_for('sign')}}" target="_blank">Getting Started?</a></p>
+    <p style="font-size: 100%; font: 1em sans-serif;"> <a href="{{url_for('log')}}" target="_blank">Already Started? </a></p>

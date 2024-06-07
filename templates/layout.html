@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{tit}}</title>
+</head>
+<body>
+    <h2 style="color:blue; text-align: center;">Hello and Welcome to the {{tit}} Page</h2>
+    <!-- {% with msg=get_flashed_messages() %}
+        {% if msg %}
+            {% for m in msg %}
+                <div>{{m}}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %} -->
+    {% block a %}
+    {% endblock %}
+</body>
+</html>

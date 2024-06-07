@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block a %}
+<p style="color:rgba(21, 255, 0, 0.76); font-size: 140%;">
+    Here is the Student details:-</p>
+{% for sid, sdet in studs.items() %}
+    <table style="font: 1em sans-serif;font-size: 100%;background-color: aqua;">
+        <tr>
+            <td style="color:rgba(255, 0, 13, 0.76);">Id:</td>
+            <td >{{sid}}</td>
+        </tr>
+        <tr>
+            <td style="color:rgba(255, 0, 200, 0.76);">Name:</td>
+            <td>{{sdet['Name']}}</td>
+        </tr>
+        <tr>
+            <td style="color:rgba(145, 255, 0, 0.952);">Age:</td>
+            <td>{{sdet['Age']}}</td>
+        </tr>
+        <tr>
+            <td style="color:rgba(255, 251, 0, 0.911);">Course:</td>
+            <td>{{sdet['Course']}}</td>
+        </tr>
+        <tr>
+            <td style="color:rgba(255, 102, 0, 0.767);">Subject:</td>
+            <td>{{sdet['Subject']}}</td>
+        </tr>
+        <tr>
+            <td style="color:rgba(0, 255, 42, 0.836);">Centre:</td>
+            <td>{{sdet['Centre']}}</td>
+        </tr>
+        <br>
+    </table>
+{% endfor %}
+{% endblock a %}

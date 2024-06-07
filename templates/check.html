@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block a %}
+    <h4 style="font-size: 120%;"> Given Input is {{num}}</h4>
+    <div style="font-size: 120%;">
+        {% if num==0 %}
+            <p style="color:rgb(255, 217, 0)"> {{num}} is 0</p>
+        {% elif num%2==0 %}
+            <p style="color:rgb(255, 217, 0)"> {{num}} is even</p>
+        {% else %}
+            <p style="color:rgb(255, 217, 0)"> {{num}} is odd</p>
+        {% endif %}
+    </div>    
+{% endblock a %}

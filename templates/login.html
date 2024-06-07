@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block a %}
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.uname.label}}
+        {{form.uname}}
+        <!-- checking for errors -->
+        {% if form.uname.errors %}
+            {% for er in form.uname.errors %}
+                <div>{{er}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.pwd.label}}
+        {{form.pwd}}
+        <!-- checking for errors -->
+        {% if form.pwd.errors %}
+            {% for er in form.pwd.errors %}
+                <div>{{er}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{form.sub()}}</div>
+    <br>
+{% endblock a %}
+ <!-- <div>
+        <p>Don't Have an account? <a href="{{url_for('sign')}}">Sign Up</a></p>
+    </div> -->
